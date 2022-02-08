@@ -3,11 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Dongle', sans-serif;
+    overflow: hidden;
 }
+
 header{
     display: flex;
     justify-content: right;
     height: 40px;
+}
+form{
+    transform: translateY(20px);
 }
 .navigation{
     display: flex;
@@ -29,7 +34,7 @@ header{
 }
 .signin{
     color: #fff;
-    background-color: #1A73E8;
+    background: #1A73E8;
     width: 85px;
     height: 35px;
     font-size: 14px;
@@ -57,11 +62,12 @@ header{
     display: flex;
     justify-content: center;
     height: 100px;
-    transform: translateY(30px);
+    transform: translateY(40px);
 }
 .logo img{
     width: 274px;
     height: 94px;
+
 }
 .search{
     height: 140px;
@@ -83,7 +89,11 @@ header{
     outline: none;
     padding: 2px 30px 2px 30px;
 }
+.search-box input:hover{
+    /* box-shadow: 0px 1px 3px rgb(192, 185, 185); */
+}
 .search-buttons{
+    height: 65px;
     display: flex;
     justify-content: center;
     transform: translateY(20px);
@@ -101,12 +111,13 @@ header{
     opacity: .6;
 }
 .languages{
-    height: 235px;
+    height: 295px;
 }
 .languages-1{
     display: flex;
     justify-content: center;
     font-size: 13px;
+    transform: translateY(10px);
 }
 .languages-1 p{
     color: #3C4043;
@@ -121,9 +132,9 @@ header{
 }
 .countryname{
     display: flex;
-    height: 40px;
+    height: 38px;
     align-items: center;
-    background-color: #eaeff5;
+    background: #eaeff5;
 }
 .countryname p{
     transform: translateX(30px);
@@ -134,9 +145,9 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 0px 10px 0px 10px;
-    height: 40px;
+    height: 42px;
     align-items: center;
-    background-color: #eaeff5;
+    background: #eaeff5;
 }
 footer a{
     text-decoration: none;
@@ -155,12 +166,54 @@ footer a{
     width: 20px;
     height: 20px;
     position: relative;
-    left: 25px;
+    left: 29px;
     opacity: .5;
 }
+
 .footer-left-side :hover{
     text-decoration: underline;
 }
 .footer-right-side :hover{
     text-decoration: underline;
+}
+
+
+@media(max-width:360px) {
+    header{
+        padding: 7px;
+    }
+
+    .navigation{
+        width: 210px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navigation a {
+        font-size: 13px;
+    }
+    
+    .logo img{
+        width: 180px;
+        height: 70px;
+        transform: translateY(30px);
+    }
+    .search-box{
+        transform: translateY(10px);
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 90px;
+    }
+    .footer-left-side{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-right-side{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
